@@ -1,0 +1,200 @@
+{
+  "languages": {
+    "en": {
+      "header": {
+        "title": "gozde",
+        "mainHeading": "I am a Frontend Developer...",
+        "description": "..who likes to craft solid and scalable frontend products with great user experiences.",
+        "socialLinks": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/gozdekosan",
+            "icon": "./src/assets/header/github.png"
+          },
+          {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/header/linkedin.png"
+          }
+        ]
+      },
+      "profile": {
+        "title": "Profile",
+        "basicInfo": {
+        "basicInfoTitle": "Basic Information",
+          "birthDate": "16.09.1999",
+          "city": "İzmir",
+          "education": "Hacettepe Ünv. Psikoloji Lisans, 2023",
+          "preferredRole": "Frontend UI"
+        },
+        "aboutMe": {
+            "aboutTitle": "About Me",
+          "description1": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+          "description2": "Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+        },
+        "image": "./src/assets/profile/image-2.png"
+      },
+      "skills": {
+        "title": "Skills",
+        "items": [
+          { "name": "Figma", "icon": "./src/assets/skills/figma.png" },
+          { "name": "Node.js", "icon": "./src/assets/skills/node.png" },
+          { "name": "Redux", "icon": "./src/assets/skills/redux.png" },
+          { "name": "JavaScript", "icon": "./src/assets/skills/js.png" },
+          { "name": "React", "icon": "./src/assets/skills/react.png" },
+          { "name": "VS Code", "icon": "./src/assets/skills/vscode.png" }
+        ]
+      },
+      "projects": {
+        "title": "Projects",
+        "items": [
+          {
+            "name": "Workintech",
+            "image": "./src/assets/projects/workintech.png",
+            "description": "A simple, customizable, and minimal setup cookie plugin that allows users to choose which cookies to accept or decline. Built with Vanilla JS, SCSS, and Parcel Bundler, and available as an NPM package. The Git repository enables full customization of code and themes.",
+            "tags": ["React", "Redux", "Vercel"],
+            "links": [
+              { "text": "View site", "url": "#" },
+              { "text": "GitHub", "url": "#" }
+            ]
+          },
+          {
+            "name": "Journey",
+            "image": "./src/assets/projects/journey.png",
+            "description": "An open-source and fully featured personal blog application. It allows users to easily write, edit, and publish articles. The app is built with modern technologies to ensure fast performance and an excellent user experience.",
+            "tags": ["React", "Redux", "Vercel"],
+            "links": [
+              { "text": "View site", "url": "#" },
+              { "text": "GitHub", "url": "#" }
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "title": "Send me a message!",
+        "subtitle": "Got a question or proposal, or just want to say hello? Go ahead.",
+        "email": "gkosann@gmail.com",
+        "socialLinks": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/gozdekosan",
+            "icon": "./src/assets/footer/at-sign.png"
+          },
+          {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/codepen.png"
+          },
+          {
+            "name": "Instagram",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/instagram.png"
+          },
+          {
+            "name": "Twitter",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/twitter.png"
+          }
+        ]
+      }
+    },
+    "tr": {
+      "header": {
+        "title": "gozde",
+        "mainHeading": "Ben bir Frontend Geliştiricisiyim...",
+        "description": "..sağlam ve ölçeklenebilir frontend ürünleri ile harika kullanıcı deneyimleri yaratmayı seviyorum.",
+        "socialLinks": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/gozdekosan",
+            "icon": "./src/assets/header/github.png"
+          },
+          {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/header/linkedin.png"
+          }
+        ]
+      },
+      "profile": {
+        "title": "Profil",
+        "basicInfo": {
+        "basicInfoTitle":"Temel Bilgiler",
+          "birthDate": "16.09.1999",
+          "city": "İzmir",
+          "education": "Hacettepe Ünv. Psikoloji Lisans, 2023",
+          "preferredRole": "Frontend UI"
+        },
+        "aboutMe": {
+        "aboutTitle":"Hakkımda",
+          "description1": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+          "description2": "Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+        },
+        "image": "./src/assets/profile/image-2.png"
+      },
+      "skills": {
+        "title": "Beceriler",
+        "items": [
+          { "name": "Figma", "icon": "./src/assets/skills/figma.png" },
+          { "name": "Node.js", "icon": "./src/assets/skills/node.png" },
+          { "name": "Redux", "icon": "./src/assets/skills/redux.png" },
+          { "name": "JavaScript", "icon": "./src/assets/skills/js.png" },
+          { "name": "React", "icon": "./src/assets/skills/react.png" },
+          { "name": "VS Code", "icon": "./src/assets/skills/vscode.png" }
+        ]
+      },
+      "projects": {
+        "title": "Projeler",
+        "items": [
+          {
+            "name": "Workintech",
+            "image": "./src/assets/projects/workintech.png",
+            "description": "Kullanıcıların hangi çerezleri kabul edip reddedeceğini seçmesine olanak tanıyan basit, özelleştirilebilir, minimal kurulumlu bir çerez eklentisidir. Vanilla JS, SCSS ve Parcel Bundler ile oluşturulmuştur ve bir NPM paketi olarak mevcuttur. Git deposu, koda ve temalara her türlü özelleştirme yapmayı mümkün kılar.",
+            "tags": ["React", "Redux", "Vercel"],
+            "links": [
+              { "text": "Siteyi Gör", "url": "#" },
+              { "text": "GitHub", "url": "#" }
+            ]
+          },
+          {
+            "name": "Journey",
+            "image": "./src/assets/projects/journey.png",
+            "description": "Açık kaynaklı ve tam özellikli bir kişisel blog uygulamasıdır. Kullanıcıların kolayca makale yazmasına, düzenlemesine ve yayınlamasına olanak tanır. Uygulama, hızlı performans ve mükemmel bir kullanıcı deneyimi sağlamak için modern teknolojilerle geliştirilmiştir.",
+            "tags": ["React", "Redux", "Vercel"],
+            "links": [
+              { "text": "Siteyi Gör", "url": "#" },
+              { "text": "GitHub", "url": "#" }
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "title": "Bana mesaj gönder!",
+        "subtitle": "Bir sorunuz mu var, bir teklif mi sunmak istiyorsunuz, yoksa sadece merhaba mı demek istiyorsunuz? İletişime geçin.",
+        "email": "gkosann@gmail.com",
+        "socialLinks": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/gozdekosan",
+            "icon": "./src/assets/footer/at-sign.png"
+          },
+          {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/codepen.png"
+          },
+          {
+            "name": "Instagram",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/instagram.png"
+          },
+          {
+            "name": "Twitter",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/twitter.png"
+          }
+        ]
+      }
+    }
+  }
+}

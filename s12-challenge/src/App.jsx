@@ -7,15 +7,21 @@ import Projects from './components/Projects'
 import Footer from './components/Footer'
 
 function App() {
+  const [language, setLanguage] = useState('en');
+
+  const handleLanguageToggle = () => {
+    setLanguage(language === 'en' ? 'tr' : 'en');
+  };
+
   return (
-    <>
-         <Header/>
-         <Skills/>
-         <Profile/>
-         <Projects/>
-          <Footer/>
-    </>
-  )
+    <div>
+      <Header language={language} onLanguageToggle={handleLanguageToggle} />
+      <Skills language={language} />
+      <Profile language={language} />
+      <Projects language={language} />
+      <Footer language={language} />
+    </div>
+  );
 }
 
-export default App
+export default App;

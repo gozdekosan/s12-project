@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import data from '../data/data.json';
 
-function Header() {
+function Header({ language, onLanguageToggle }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const modeText = isDarkMode ? 'DARK MODE' : 'LIGHT MODE';
+  const content = data.languages[language].header;
+  const buttonText = language === 'en' ? 'TÜRKÇEYE GEÇ' : 'SWITCH ENGLISH';
 
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);
@@ -15,15 +18,18 @@ function Header() {
         background: `linear-gradient(to right, #4731D3 0%, #4731D3 70%, #CBF281 70%, #CBF281 100%)`,
       }}
     >
-      <header className="relative w-full flex flex-col items-center">
-        <h2 className="text-[#CBF281] text-3xl font-bold absolute top-[-2rem] left-0">
-          gozde
+      <header className="relative w-full flex flex-col items-center justify-center">
+        <h2 className="text-[#CBF281] text-3xl font-bold absolute top-2 left-6">
+          {content.title}
         </h2>
 
-        <div className="flex items-center absolute top-0" style={{ left: 'calc(58%)' }}>
-          <button className="bg-transparent border-none p-0 transition mr-4">
-            <span style={{ color: '#CBF281' }}>TÜRKÇE</span>{' '}
-            <span style={{ color: '#777777' }}>YE GEÇ</span>
+        <div className="flex items-center absolute top-0" style={{ left: 'calc(59%)' }}>
+          <button
+            className="!bg-transparent border-none p-0 transition mr-4"
+            onClick={onLanguageToggle}
+          >
+            <span style={{ color: '#CBF281' }}>{buttonText.split(' ')[0]}</span>{' '}
+            <span style={{ color: '#777777' }}>{buttonText.split(' ')[1]}</span>
           </button>
           <label
             htmlFor="darkModeToggle"
@@ -54,34 +60,26 @@ function Header() {
           </label>
         </div>
 
-        <div className="max-w-lg mt-12" left="calc(0% - 15rem)">
+        <div className="max-w-lg mt-12" style={{ marginRight: 'calc(35%)' }}>
           <h1 className="text-2xl font-bold text-[#CBF281] text-left">
-            I am a Frontend Developer...
+            {content.mainHeading}
           </h1>
           <p className="text-2xl italic mb-6 text-white text-left">
-            ..who likes to craft solid and scalable frontend products with great
-            user experiences.
+            {content.description}
           </p>
           <nav className="flex justify-center">
             <ul className="flex space-x-6">
-              <li>
-                <a href="https://github.com/gozdekosan" target="_blank">
-                  <img
-                    src="./src/assets/header/github.png"
-                    alt="Github"
-                    style={{ width: 'auto', height: '2.5rem' }}
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/gozdekosan" target="_blank">
-                  <img
-                    src="./src/assets/header/linkedin.png"
-                    alt="Linkedin"
-                    style={{ width: 'auto', height: '2.5rem' }}
-                  />
-                </a>
-              </li>
+              {content.socialLinks.map((link, index) => (
+                <li key={index}>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={link.icon}
+                      alt={link.name}
+                      style={{ width: 'auto', height: '2.5rem' }}
+                    />
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
