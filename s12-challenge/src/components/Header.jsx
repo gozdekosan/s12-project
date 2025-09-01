@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import data from '../data/data.json';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleLanguage } from '../store/languageSlice';
+import { toggleTheme } from '../store/themeSlice';
 
-function Header({ language, onLanguageToggle }) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const modeText = isDarkMode ? 'DARK MODE' : 'LIGHT MODE';
+function Header() {
+  const language = useSelector(state => state.language.current);
+  const isDarkMode = useSelector(state => state.theme.isDarkMode);
+  const dispatch = useDispatch();
+
   const content = data.languages[language].header;
+  const modeText = isDarkMode ? 'LIGHT MODE' : 'DARK MODE';
   const buttonText = language === 'en' ? 'TÜRKÇEYE GEÇ' : 'SWITCH ENGLISH';
-
-  const handleToggle = () => {
-    setIsDarkMode(!isDarkMode);
-  };
 
   return (
     <div
       className="flex w-screen h-screen px-6"
       style={{
-        background: `linear-gradient(to right, #4731D3 0%, #4731D3 70%, #CBF281 70%, #CBF281 100%)`,
+        background: isDarkMode
+          ? 'linear-gradient(to right, #171043 0%, #171043 70%, #211F0B 70%, #211F0B 100%)'
+          : 'linear-gradient(to right, #4731D3 0%, #4731D3 70%, #CBF281 70%, #CBF281 100%)',
       }}
     >
       <header className="relative w-full flex flex-col items-center justify-center">
@@ -26,11 +30,12 @@ function Header({ language, onLanguageToggle }) {
         <div className="flex items-center absolute top-0" style={{ left: 'calc(59%)' }}>
           <button
             className="!bg-transparent border-none p-0 transition mr-4"
-            onClick={onLanguageToggle}
+            onClick={() => dispatch(toggleLanguage())}
           >
             <span style={{ color: '#CBF281' }}>{buttonText.split(' ')[0]}</span>{' '}
             <span style={{ color: '#777777' }}>{buttonText.split(' ')[1]}</span>
           </button>
+
           <label
             htmlFor="darkModeToggle"
             className="flex items-center cursor-pointer text-[#4731D3] font-bold text-lg"
@@ -40,12 +45,12 @@ function Header({ language, onLanguageToggle }) {
               id="darkModeToggle"
               className="hidden"
               checked={isDarkMode}
-              onChange={handleToggle}
+              onChange={() => dispatch(toggleTheme())}
             />
             <div
               className="w-14 h-8 rounded-full p-1 transition-colors duration-300 ease-in-out"
               style={{
-                backgroundColor: isDarkMode ? '#8F88FF' : '#3A3A3A',
+                backgroundColor: isDarkMode ? '#3A3A3A' : '#8F88FF',
               }}
             >
               <div
@@ -64,19 +69,13 @@ function Header({ language, onLanguageToggle }) {
           <h1 className="text-2xl font-bold text-[#CBF281] text-left">
             {content.mainHeading}
           </h1>
-          <p className="text-2xl italic mb-6 text-white text-left">
-            {content.description}
-          </p>
+          <p className="text-2xl italic mb-6 text-white text-left">{content.description}</p>
           <nav className="flex justify-center">
             <ul className="flex space-x-6">
               {content.socialLinks.map((link, index) => (
                 <li key={index}>
                   <a href={link.url} target="_blank" rel="noopener noreferrer">
-                    <img
-                      src={link.icon}
-                      alt={link.name}
-                      style={{ width: 'auto', height: '2.5rem' }}
-                    />
+                    <img src={link.icon} alt={link.name} style={{ width: 'auto', height: '2.5rem' }} />
                   </a>
                 </li>
               ))}
@@ -87,11 +86,7 @@ function Header({ language, onLanguageToggle }) {
         <img
           src="./src/assets/image-1.png"
           className="absolute top-1/2 transform -translate-y-1/2"
-          style={{
-            width: '28rem',
-            height: '30rem',
-            left: 'calc(71.43% - 14rem)',
-          }}
+          style={{ width: '28rem', height: '30rem', left: 'calc(71.43% - 14rem)' }}
         />
       </header>
     </div>

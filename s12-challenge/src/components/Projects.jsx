@@ -1,20 +1,24 @@
 import React from 'react';
 import data from '../data/data.json';
+import { useSelector } from 'react-redux';
 
-function Projects({ language }) {
+function Projects() {
+  const language = useSelector(state => state.language.current);
+  const isDarkMode = useSelector(state => state.theme.isDarkMode);
+
   const content = data.languages[language].projects;
 
   return (
-    <div className="bg-[#CBF281] p-8 min-h-screen">
+    <div className={`${isDarkMode ? 'bg-[#1A210B]' : 'bg-[#CBF281]'} p-8 min-h-screen`}>
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-left text-[#4731D3]">
+        <h1 className={`text-4xl font-bold mb-8 text-left ${isDarkMode ? 'text-white' : 'text-[#4731D3]'}`}>
           {content.title}
         </h1>
 
         {content.items.map((project, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg mb-8 flex flex-col md:flex-row gap-8 items-start"
+            className={`p-6 rounded-lg shadow-lg mb-8 flex flex-col md:flex-row gap-8 items-start ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}
           >
             <img
               src={project.image}
@@ -22,10 +26,10 @@ function Projects({ language }) {
               className="w-full h-auto max-h-[360px] object-cover rounded-lg transition duration-300 md:w-1/2"
             />
             <div className="flex flex-col w-full md:w-1/2">
-              <h2 className="text-3xl font-semibold mb-2 text-left text-[#4338CA]">
+              <h2 className={`text-3xl font-semibold mb-2 text-left ${isDarkMode ? 'text-white' : 'text-[#4338CA]'}`}>
                 {project.name}
               </h2>
-              <p className="text-gray-700 mb-4 text-lg text-left">
+              <p className={`mb-4 text-lg text-left ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>
                 {project.description}
               </p>
               <div className="flex gap-2 flex-wrap mb-4 justify-start">
