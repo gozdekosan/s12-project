@@ -74,34 +74,28 @@
         "title": "Send me a message!",
         "subtitle": "Got a question or proposal, or just want to say hello? Go ahead.",
         "email": "gkosann@gmail.com",
-  "socialLinks": [
-    {
-      "name": "GitHub",
-      "url": "https://github.com/gozdekosan",
-      "iconLight": "./src/assets/footer/at-sign.png",
-      "iconDark": "./src/assets/footer/at-sign-dark.png"
-    },
-    {
-      "name": "LinkedIn",
-      "url": "https://linkedin.com/in/gozdekosan",
-      "iconLight": "./src/assets/footer/codepen.png",
-      "iconDark": "./src/assets/footer/codepen-dark.png"
-    },
-    {
-      "name": "Instagram",
-      "url": "https://linkedin.com/in/gozdekosan",
-      "iconLight": "./src/assets/footer/instagram.png",
-      "iconDark": "./src/assets/footer/instagram-dark.png"
-    },
-    {
-      "name": "Twitter",
-      "url": "https://linkedin.com/in/gozdekosan",
-      "iconLight": "./src/assets/footer/twitter.png",
-      "iconDark": "./src/assets/footer/twitter-dark.png"
-    }
-  ]
-}
-
+        "socialLinks": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/gozdekosan",
+            "icon": "./src/assets/footer/at-sign.png"
+          },
+          {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/codepen.png"
+          },
+          {
+            "name": "Instagram",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/instagram.png"
+          },
+          {
+            "name": "Twitter",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/twitter.png"
+          }
+        ]
       }
     },
     "tr": {
@@ -175,37 +169,32 @@
         ]
       },
       "footer": {
-  "title": "Bana mesaj gönder!",
-  "subtitle": "Bir sorunuz mu var, bir teklif mi sunmak istiyorsunuz? İletişime geçin.",
-  "email": "gkosann@gmail.com",
-  "socialLinks": [
-    {
-      "name": "GitHub",
-      "url": "https://github.com/gozdekosan",
-      "iconLight": "./src/assets/footer/at-sign.png",
-      "iconDark": "./src/assets/footer/at-sign-dark.png"
-    },
-    {
-      "name": "LinkedIn",
-      "url": "https://linkedin.com/in/gozdekosan",
-      "iconLight": "./src/assets/footer/codepen.png",
-      "iconDark": "./src/assets/footer/codepen-dark.png"
-    },
-    {
-      "name": "Instagram",
-      "url": "https://linkedin.com/in/gozdekosan",
-      "iconLight": "./src/assets/footer/instagram.png",
-      "iconDark": "./src/assets/footer/instagram-dark.png"
-    },
-    {
-      "name": "Twitter",
-      "url": "https://linkedin.com/in/gozdekosan",
-      "iconLight": "./src/assets/footer/twitter.png",
-      "iconDark": "./src/assets/footer/twitter-dark.png"
-    }
-  ]
-}
-
+        "title": "Bana mesaj gönder!",
+        "subtitle": "Bir sorunuz mu var, bir teklif mi sunmak istiyorsunuz, yoksa sadece merhaba mı demek istiyorsunuz? İletişime geçin.",
+        "email": "gkosann@gmail.com",
+        "socialLinks": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/gozdekosan",
+            "icon": "./src/assets/footer/at-sign.png"
+          },
+          {
+            "name": "LinkedIn",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/codepen.png"
+          },
+          {
+            "name": "Instagram",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/instagram.png"
+          },
+          {
+            "name": "Twitter",
+            "url": "https://linkedin.com/in/gozdekosan",
+            "icon": "./src/assets/footer/twitter.png"
+          }
+        ]
+      }
     }
   }
-
+}
