@@ -10,30 +10,31 @@ function Skills() {
 
   return (
     <div
-      className={`max-w-4xl mx-auto p-6 flex transition-colors duration-500 ${
+      className={`max-w-4xl mx-auto p-6 flex flex-col ${
         isDarkMode ? 'bg-[#2B2727]' : 'bg-white'
       }`}
       style={{ marginRight: 'calc(25%)' }}
     >
-     <h1
-        className={`!text-left text-2xl font-bold mr-8 ${
+      <h1
+        className={`!text-left text-2xl font-bold mr-8 mb-6 ${
           isDarkMode ? 'text-[#CBF281]' : 'text-[#4832D3]'
         }`}
       >
         {content.title}
       </h1>
 
-
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-2 gap-6 md:gap-8">
         {content.items.map((skill, index) => (
-          <div key={index} className="flex items-center space-x-6">
+          <div key={index} className="flex items-center space-x-8 md:pl-4">
             <img
               src={skill.icon}
-              className="w-40 h-40 object-contain transform hover:scale-110 transition duration-300"
               alt={skill.name}
+              className="object-contain
+                         w-20 h-20 sm:w-24 sm:h-24 md:w-[140px] md:h-[140px]"
+              style={{ maxWidth: '140px', maxHeight: '140px' }}
             />
-             <span
-              className={`text-2xl font-medium font-inter ${
+            <span
+              className={`text-lg md:text-xl font-medium font-inter ${
                 isDarkMode ? 'text-white' : 'text-[#777777]'
               }`}
             >

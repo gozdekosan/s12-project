@@ -19,12 +19,12 @@ function Projects() {
         {content.items.map((project, index) => (
           <div
             key={index}
-            className={`p-6 rounded-lg shadow-lg mb-8 flex flex-col md:flex-row gap-8 items-start  ${isDarkMode ? 'bg-[#2B2727]' : 'bg-white '}`}
+            className={`p-6 rounded-lg mb-8 flex flex-col md:flex-row gap-8 items-start  ${isDarkMode ? 'bg-[#2B2727]' : 'bg-white '}`}
           >
             <img
               src={project.image}
               alt={`${project.name} Projesi`}
-              className="w-full h-auto max-h-[360px] object-cover rounded-lg transition duration-300 md:w-1/2"
+              className="w-full h-auto max-h-[360px] object-cover rounded-lg md:w-1/2"
             />
             <div className="flex flex-col w-full md:w-1/2">
                <h2 className={`text-3xl font-semibold mb-2 text-left ${isDarkMode ? 'text-[#C1BAED]' : 'text-[#4338CA]'}`}>

@@ -25,7 +25,7 @@ function Footer() {
   <ul className="flex space-x-6">
     {content.socialLinks.map((link, index) => (
       <li key={index}>
-        <a href={link.url} target="_blank" rel="noopener noreferrer">
+        <a href={link.url}>
           <img
             src={isDarkMode && link.iconDark ? link.iconDark : link.icon}
             alt={link.name}
