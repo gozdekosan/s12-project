@@ -1,22 +1,25 @@
 import React, { useContext } from 'react';
 import data from '../data/data.json';
 import { LanguageContext } from '../context/LanguageContext.jsx';
+import { ThemeContext } from '../context/ThemeContext.jsx';
 
 function Projects() {
   const { language } = useContext(LanguageContext);
+   const { isDarkMode } = useContext(ThemeContext);
   const content = data.languages[language].projects;
 
   return (
-    <div className="bg-[#CBF281] p-8 min-h-screen">
+    <div className={`p-8 min-h-screen ${isDarkMode ? 'bg-[#1A210B] text-white' : 'bg-[#CBF281] text-[#4731D3]'}`}>
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-left text-[#4731D3]">
+        <h1 className={`text-4xl font-bold mb-8 text-left ${isDarkMode ? 'text-[#CBF281]' : 'text-[#4731D3]'}`}>
           {content.title}
         </h1>
+
 
         {content.items.map((project, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg mb-8 flex flex-col md:flex-row gap-8 items-start"
+            className={`p-6 rounded-lg shadow-lg mb-8 flex flex-col md:flex-row gap-8 items-start  ${isDarkMode ? 'bg-[#2B2727]' : 'bg-white '}`}
           >
             <img
               src={project.image}
@@ -24,33 +27,33 @@ function Projects() {
               className="w-full h-auto max-h-[360px] object-cover rounded-lg transition duration-300 md:w-1/2"
             />
             <div className="flex flex-col w-full md:w-1/2">
-              <h2 className="text-3xl font-semibold mb-2 text-left text-[#4338CA]">
+               <h2 className={`text-3xl font-semibold mb-2 text-left ${isDarkMode ? 'text-[#C1BAED]' : 'text-[#4338CA]'}`}>
                 {project.name}
               </h2>
-              <p className="text-gray-700 mb-4 text-lg text-left">
+              <p className={`text-gray-700 mb-4 text-lg text-left ${isDarkMode ? 'text-white' : 'text-[#383838]'}`}>
                 {project.description}
               </p>
               <div className="flex gap-2 flex-wrap mb-4 justify-start">
                 {project.tags.map((tag, tagIndex) => (
                   <span
                     key={tagIndex}
-                    className="px-4 py-2 bg-[#5B3DF5] text-white rounded-full text-sm font-medium"
+                    className={`px-4 py-2 rounded-full text-sm font-medium ${isDarkMode ? 'bg-[#8173DA] text-white' : 'bg-[#5B3DF5] text-white'}`}
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <nav className="flex gap-4">
-                {project.links.map((link, linkIndex) => (
-                  <a
-                    key={linkIndex}
-                    href={link.url}
-                    className="text-[#5B3DF5] hover:underline font-medium"
-                  >
-                    {link.text}
-                  </a>
+                <nav className="flex gap-4">
+               {project.links.map((link, linkIndex) => (
+               <a
+                 key={linkIndex}
+                 href={link.url}
+                className={`font-medium !underline decoration-2 decoration-current ${isDarkMode ? '!text-[#CBF281]' : '!text-[#120B39]'}`}
+               >
+              {link.text}
+              </a>
                 ))}
-              </nav>
+                </nav>
             </div>
           </div>
         ))}
