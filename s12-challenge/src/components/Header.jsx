@@ -97,7 +97,7 @@ function Header() {
 
           <div className="flex justify-center mb-6 md:mb-0">
             <img
-              src="./src/assets/image-1.png"
+              src="images/header/image-1.png"
               className="w-full h-auto sm:w-120 sm:h-120 md:w-[28rem] md:h-[30rem] object-cover rounded-lg"
               alt="Profile"
             />
