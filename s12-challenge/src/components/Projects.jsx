@@ -10,7 +10,7 @@ function Projects() {
   const content = data.languages[language].projects;
 
   const api = axios.create({
-  baseURL: 'https://reqres.in/api',
+  baseURL: 'https://reqres.in/users',
   headers: 'x-api-key: reqres-free-v1',
 });
 
