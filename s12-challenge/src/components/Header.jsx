@@ -29,7 +29,7 @@ function Header() {
 
         <div className="flex flex-row items-center justify-end md:justify-start w-full md:w-auto absolute top-0 left-auto right-4 sm:right-16 md:left-[50%] lg:left-[50%] xl:left-[58%]">
           <button
-            className={`!bg-transparent border-none p-0 transition mr-4 ${
+            className={`!bg-transparent border-none !focus:outline-none  p-0  mr-4 ${
               isDarkMode ? 'text-[#8F88FF]' : 'text-[#CBF281]'
             }`}
             onClick={toggleLanguage}

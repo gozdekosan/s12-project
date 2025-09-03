@@ -8,6 +8,7 @@ function Profile() {
   const { isDarkMode } = useContext(ThemeContext);
   const content = data.languages[language].profile;
 
+
   return (
     <div
       className={`p-6 pb-12  ${

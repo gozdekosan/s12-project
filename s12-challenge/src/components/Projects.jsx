@@ -1,12 +1,38 @@
-import React, { useContext } from 'react';
+import React, { useContext,useEffect } from 'react';
 import data from '../data/data.json';
 import { LanguageContext } from '../context/LanguageContext.jsx';
 import { ThemeContext } from '../context/ThemeContext.jsx';
+import axios from 'axios';
 
 function Projects() {
   const { language } = useContext(LanguageContext);
-   const { isDarkMode } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
   const content = data.languages[language].projects;
+
+  const api = axios.create({
+  baseURL: 'https://reqres.in/api',
+  headers: 'x-api-key: reqres-free-v1',
+});
+
+useEffect(() => {
+    async function postData() {
+      try {
+        for (let project of content.items) {
+          const response = await api.post('/projects', {
+            name: project.name,
+            description: project.description,
+            tags: project.tags,
+            image: project.image,
+            links: project.links,
+          });
+          console.log(`POST sonucu (${project.name}):`, response.data);
+        }
+      } catch (err) {
+        console.error('Hata:', err.message);
+      }
+    }
+    postData();
+  }, [content.items]);
 
   return (
     <div className={`p-8 min-h-screen ${isDarkMode ? 'bg-[#1A210B] text-white' : 'bg-[#CBF281] text-[#4731D3]'}`}>
